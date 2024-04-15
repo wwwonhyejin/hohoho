@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>about - WON HYE JIN Portfolio</title>
+        <title>Part 2 - WON HYE JIN Portfolio</title>
         <style>
             /* 전체 스타일 */
             body {
@@ -58,6 +58,7 @@
             justify-content: center;
             gap: 5px; /* 이미지 사이의 간격을 아주 좁게 설정 */
             padding: 20px;
+            margin-left: 180px;
         }
         .thumbnail {
             width: 400px; /* 이미지 크기를 더 크게 설정 */
@@ -160,7 +161,12 @@
             Works
             <div class="sub-menu">
                 <a href="desire.html">Desire and Fragments 2024</a><!-- Part 1을 클릭하면 part1.html로 이동 -->
-                <a href="part2.html">Part 2</a>
+                <a href="mom.html">Mom, did you...? 2024</a>
+                <a href="blackbox.html">Black Box 2024</a>
+                <a href="onandoff.html">On and Off 2024</a>
+                <a href="twoseats.html">Two Seats 2018</a>
+                <a href="splinter.html">Splinter 2017</a>
+                <a href="familyportrait.html">Family Portrait 2016</a>
             </div>
         </div>
         <a href="about.html">About</a> <!-- About 페이지로 이동 -->
@@ -207,178 +213,3 @@
 </body>
 </html>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Part 2 - WON HYE JIN Portfolio</title>
-    <style>
-        /* 전체 스타일 */
-        body {
-            font-family: 'PT Serif', serif; /* PT Serif 폰트로 변경 */
-            margin: 0;
-            padding: 0;
-            background-color: #fff; /* 전체 배경색을 하얀색으로 설정 */
-            color: #333; /* 전체 텍스트 색상을 어두운 회색으로 설정 */
-        }
-        /* 메뉴 스타일 */
-        nav {
-            background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
-            position: fixed; /* 고정 위치 설정 */
-            top: 0; /* 위쪽에 붙이기 */
-            left: 0; /* 왼쪽에 붙이기 */
-            padding: 10px;
-            z-index: 2; /* 다른 요소 위에 표시하기 위해 인덱스 설정 */
-            display: flex; /* 세로로 정렬하기 위해 flex 사용 */
-            flex-direction: column; /* 세로로 정렬 */
-        }
-        nav a {
-            color: #333; /* 메뉴 항목 텍스트 색상을 진한 회색으로 설정 */
-            text-decoration: none;
-            margin: 10px 0; /* 항목 사이의 간격 설정 */
-            font-size: 14px; /* 글씨 크기를 작게 설정 */
-        }
-        nav a:hover {
-            color: #000; /* 메뉴 항목 텍스트 색상을 검정색으로 설정 */
-        }
-        /* Works 하위 메뉴 스타일 */
-        .sub-menu {
-            display: block; /* 항상 보이게 설정 */
-            background-color: transparent; /* Works 하위 메뉴 배경색을 투명하게 설정 */
-            color: #8d8d8d; /* Works 하위 메뉴 텍스트 색상을 밝은 회색으로 설정 */
-            padding: 10px;
-            z-index: 3; /* 메뉴보다 위에 표시되도록 설정 */
-            text-align: left; /* 텍스트 왼쪽 정렬 설정 */
-        }
-        .sub-menu a {
-            display: block;
-            text-decoration: none;
-            color: #8d8d8d; /* 하위 메뉴 텍스트 색상을 밝은 회색으로 설정 */
-            margin: 5px 0;
-        }
-        .sub-menu a:hover {
-            color: #000; /* 하위 메뉴 텍스트 색상을 검정색으로 설정 */
-        }
-        /* 이미지 썸네일 스타일 */
-        .thumbnail-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px; /* 이미지 사이의 간격을 아주 좁게 설정 */
-            padding: 20px;
-        }
-        .thumbnail {
-            width: 400px; /* 이미지 크기를 더 크게 설정 */
-            height: auto;
-            border-radius: 0px; /* 모서리를 각지게 설정 */
-            cursor: pointer;
-        }
-        /* 큰 이미지 스타일 */
-        #large-image-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* 배경 투명도 설정 */
-            z-index: 9999;
-        }
-        #large-image {
-            display: block;
-            margin: auto;
-            max-width: 90%; /* 이미지 크기를 화면을 거의 꽉 채우도록 크게 설정 */
-            max-height: 90%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        #close-btn {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            cursor: pointer;
-            color: #fff;
-            font-size: 24px;
-        }
-        /* 화살표 스타일 */
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            font-size: 36px;
-            color: #fff;
-        }
-        #prev-arrow {
-            left: 10px;
-        }
-        #next-arrow {
-            right: 10px;
-        }
-        #image-caption {
-            position: absolute;
-            bottom: 0px; /* 이미지 설명을 조금 위로 옮김 */
-            right: 10px; /* 이미지 설명을 왼쪽으로 옮김 */
-            padding: 10px;
-            color: #c9c9c9; /* 코멘트 폰트 색을 밝은 회색으로 설정 */
-            background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
-        }
-        #about-section {
-            text-align: justify; /* 텍스트 및 제목 가운데 정렬 */
-            margin-top: 10px; /* 위쪽 여백 설정 */
-            margin-left: 200px; /* 왼쪽 여백을 자동으로 조정하여 오른쪽으로 이동 */
-        }
-
-        #about-section h2 {
-            margin-left: 0; /* 왼쪽 여백을 0으로 설정하여 맞춤 */
-            color: #888; /* 회색으로 색상 지정 */
-            margin-bottom: 5px; /* 제목 아래쪽 여백 설정 */
-        }
-
-        #about-section p {
-            text-align: justify; /* 텍스트 맞춤 설정 */
-            margin: 0 auto 5px auto; /* 왼쪽과 오른쪽 여백 자동 조정 및 아래 여백 설정 */
-        }
-
-        #about-section dl {
-            text-align: left; /* 내용은 왼쪽 정렬 */
-        }
-
-        #about-section dt {
-            font-weight: bold; /* 년도는 볼드체로 표시 */
-            margin-top: 20px; /* 년도 위쪽 여백 늘리기 */
-            margin-bottom: 10px; /* 년도 아래쪽 여백 늘리기 */
-            color: #888; /* 년도 색상 회색으로 설정 */
-        }
-
-        #about-section dd {
-            margin-left: 0; /* 내용을 왼쪽으로 이동하여 제목과 맞춤 */
-            margin-bottom: 7px; /* 각 내용 아래쪽 여백 늘리기 */
-        }
-
-        /* 스마트폰용 스타일 */
-        @media only screen and (max-width: 600px) {
-            nav {
-                padding: 5px; /* 네비게이션 바 패딩 축소 */
-            }
-            nav a {
-                font-size: 12px; /* 네비게이션 바 글씨 크기 축소 */
-            }
-            .sub-menu a {
-                font-size: 12px; /* 하위 메뉴 글씨 크기 축소 */
-            }
-            .thumbnail {
-                width: 100%; /* 이미지 크기를 화면 폭에 맞게 조정 */
-            }
-            #about-section {
-                margin-left: 10px; /* 왼쪽 여백을 줄여서 오른쪽으로 이동 */
-            }
-        }
-    </style>
-</head>
-<body>
-<!-- 내용은 그대로 유지 -->
-</body>
-</html>
