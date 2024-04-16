@@ -83,22 +83,26 @@
         }
         /* Works 하위 메뉴 스타일 */
         .sub-menu {
-            display: block; /* 항상 보이게 설정 */
-            background-color: transparent; /* Works 하위 메뉴 배경색을 투명하게 설정 */
-            color: #8d8d8d; /* Works 하위 메뉴 텍스트 색상을 밝은 회색으로 설정 */
-            padding: 10px;
-            z-index: 3; /* 메뉴보다 위에 표시되도록 설정 */
-            text-align: center; /* 텍스트 왼쪽 정렬 설정 */
-        }
-        .sub-menu a {
-            display: block;
-            text-decoration: none;
-            color: #8d8d8d; /* 하위 메뉴 텍스트 색상을 밝은 회색으로 설정 */
-            margin: 5px 0;
-        }
-        .sub-menu a:hover {
-            color: #000; /* 하위 메뉴 텍스트 색상을 검정색으로 설정 */
-        }
+    display: block; /* 항상 보이게 설정 */
+    background-color: transparent; /* Works 하위 메뉴 배경색을 투명하게 설정 */
+    color: #8d8d8d; /* Works 하위 메뉴 텍스트 색상을 밝은 회색으로 설정 */
+    padding: 10px;
+    z-index: 3; /* 메뉴보다 위에 표시되도록 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 설정 */
+    position: fixed; /* 메뉴가 스크롤과 함께 고정되도록 설정 */
+    top: 50%; /* 화면 세로 중앙에 위치하도록 설정 */
+    left: 50%; /* 화면 가로 중앙에 위치하도록 설정 */
+    transform: translate(-50%, -50%); /* 가운데 정렬을 위한 변형(transform) 설정 */
+}
+.sub-menu a {
+    display: block;
+    text-decoration: none;
+    color: #8d8d8d; /* 하위 메뉴 텍스트 색상을 밝은 회색으로 설정 */
+    margin: 5px 0;
+}
+.sub-menu a:hover {
+    color: #000; /* 하위 메뉴 텍스트 색상을 검정색으로 설정 */
+}
         /* 이미지 스타일 */
         img {
     width: auto; /* 화면 전체 너비로 설정 */
