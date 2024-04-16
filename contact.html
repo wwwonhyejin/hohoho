@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WON HYE JIN Portfolio</title>
+    <title>Contact - WON HYE JIN Portfolio</title>
     <style>
         /* 전체 스타일 */
         body {
-            font-family: 'PT Serif', serif;
+            font-family: 'PT Serif', serif; /* PT Serif 폰트로 변경 */
             margin: 0;
             padding: 0;
             background-color: #fff; /* 전체 배경색을 하얀색으로 설정 */
             color: #333; /* 전체 텍스트 색상을 어두운 회색으로 설정 */
         }
-         /* 메뉴 스타일 */
-         nav {
+        /* 메뉴 스타일 */
+        nav {
             background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
             position: fixed; /* 고정 위치 설정 */
             top: 0; /* 위쪽에 붙이기 */
@@ -25,7 +25,7 @@
             flex-direction: column; /* 세로로 정렬 */
         }
         nav a {
-            color: #ccc; /* 메뉴 항목 텍스트 색상을 밝은 회색으로 설정 */
+            color: #333; /* 메뉴 항목 텍스트 색상을 진한 회색으로 설정 */
             text-decoration: none;
             margin: 10px 0; /* 항목 사이의 간격 설정 */
             font-size: 14px; /* 글씨 크기를 작게 설정 */
@@ -51,68 +51,99 @@
         .sub-menu a:hover {
             color: #000; /* 하위 메뉴 텍스트 색상을 검정색으로 설정 */
         }
-        /* 이미지 스타일 */
-        img {
-            width: 100%; /* 이미지가 부모 요소의 너비를 차지하도록 설정 */
+        /* 이미지 썸네일 스타일 */
+        .thumbnail-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px; /* 이미지 사이의 간격을 아주 좁게 설정 */
+            padding: 20px;
+            margin-left: 180px;
+        }
+        .thumbnail {
+            width: 400px; /* 이미지 크기를 더 크게 설정 */
             height: auto;
+            border-radius: 0px; /* 모서리를 각지게 설정 */
+            cursor: pointer;
+        }
+        /* 큰 이미지 스타일 */
+        #large-image-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* 배경 투명도 설정 */
+            z-index: 9999;
+        }
+        #large-image {
             display: block;
+            margin: auto;
+            max-width: 90%; /* 이미지 크기를 화면을 거의 꽉 채우도록 크게 설정 */
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+        }
+        /* 화살표 스타일 */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 36px;
+            color: #fff;
+        }
+        #prev-arrow {
+            left: 10px;
+        }
+        #next-arrow {
+            right: 10px;
+        }
+        #image-caption {
+            position: absolute;
+            bottom: 0px; /* 이미지 설명을 조금 위로 옮김 */
+            right: 10px; /* 이미지 설명을 왼쪽으로 옮김 */
+            padding: 10px;
+            color: #c9c9c9; /* 코멘트 폰트 색을 밝은 회색으로 설정 */
+            background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
+        }
+        /* 본문 내용을 가운데 정렬 */
+        #contact-section {
+            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
+            margin-top: 10px; /* 위쪽 여백 설정 */
+            margin-left: auto; /* 왼쪽 여백을 자동으로 조정하여 중앙으로 이동 */
+            margin-right: auto; /* 오른쪽 여백을 자동으로 조정하여 중앙으로 이동 */
         }
 
-        /* 스마트폰에서 메뉴와 이미지 스타일 수정 */
-        @media only screen and (max-width: 600px) {
-            nav {
-                background-color: transparent;
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 10px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    nav a {
-        color: #ccc;
-        text-decoration: none;
-        margin: 10px 0;
-        font-size: 14px;
-        text-align: center;
-    }
-    nav a:hover {
-        color: #000;
-    }
-    /* Works 하위 메뉴 스타일 */
-    .sub-menu {
-        display: block;
-        background-color: transparent;
-        color: #8d8d8d;
-        padding: 10px;
-        z-index: 3;
-        text-align: center;
-    }
-    .sub-menu a {
-        display: block;
-        text-decoration: none;
-        color: #8d8d8d;
-        margin: 5px 0;
-    }
-    .sub-menu a:hover {
-        color: #000;
-    }
-    /* 이미지 스타일 */
-    img {
-        width: auto;
-        height: 100vh;
-        display: block;
-        object-fit: cover;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
+        #contact-section h2 {
+            margin-left: 0; /* 왼쪽 여백을 0으로 설정하여 맞춤 */
+            color: #888; /* 회색으로 색상 지정 */
+            margin-bottom: 5px; /* 제목 아래쪽 여백 설정 */
+        }
 
-        
+        #contact-section p {
+            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
+    margin-top: 10px; /* 위쪽 여백 설정 */
+    margin: 10px auto; /* 상하 여백은 10px로 설정하고 좌우 여백은 자동으로 조정하여 중앙으로 이동 */
+        }
+
+        #contact-section .contact-icon {
+            display: inline-block; /* 아이콘을 옆으로 정렬 */
+            margin: 10px; /* 아이콘 간격 설정 */
+            font-size: 24px; /* 아이콘 크기 설정 */
+            color: #333; /* 아이콘 색상 설정 */
+        }
     </style>
 </head>
 <body>
@@ -147,9 +178,15 @@
     <a href="contact.html" style="font-size: 16px; color: #696969; margin-top: 5px; margin-bottom: 5px; font-weight: bold;">Contact</a>
 </nav>
 
-    <!-- 첫 화면 이미지 -->
-    <img src="homemain.jpg" alt="Your Image">
-
-    <!-- 추가적인 내용을 이어서 작성하세요 -->
+    <!-- Contact 섹션 -->
+    <section id="contact-section">
+        <h2>Contact</h2>
+        <p>studio.wonhyejin@gmail.com</p>
+        <p>https://www.instagram.com/studio.wonhyejin</p>
+        <!-- 이메일 아이콘과 링크 -->
+        <a href="mailto:studio.wonhyejin" class="contact-icon">✉️</a>
+        <!-- 인스타그램 아이콘과 링크 -->
+        <a href="https://www.instagram.com/studio.wonhyejin" class="contact-icon">📷</a>
+    </section>
 </body>
 </html>
