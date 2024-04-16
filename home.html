@@ -17,8 +17,6 @@
         nav {
             background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
             position: fixed; /* 고정 위치 설정 */
-            top: 0; /* 위쪽에 붙이기 */
-            left: 0; /* 왼쪽에 붙이기 */
             padding: 10px;
             z-index: 2; /* 다른 요소 위에 표시하기 위해 인덱스 설정 */
             display: flex; /* 세로로 정렬하기 위해 flex 사용 */
@@ -57,6 +55,22 @@
             height: auto;
             display: block;
         }
+
+        /* 스마트폰에서 메뉴 정렬 수정 */
+        @media only screen and (max-width: 600px) {
+            nav {
+                align-items: center; /* 메뉴 항목을 세로 중앙으로 정렬 */
+            }
+            nav a {
+                margin: 5px 0; /* 스마트폰에서 메뉴 항목 간격을 줄임 */
+            }
+            nav a {
+                color: #ccc; /* 메뉴 항목 텍스트 색상을 밝은 회색으로 설정 */
+            }
+            nav a:hover {
+                color: #000; /* 메뉴 항목 텍스트 색상을 검정색으로 설정 */
+            }
+        }
     </style>
 </head>
 <body>
@@ -76,7 +90,7 @@
             </div>
         </div>
         <a href="about.html">About</a>
-        <a href="#">Contact</a>
+        <a href="contact.html">Contact</a> <!-- Contact 페이지로 이동 -->
     </nav>
 
     <!-- 첫 화면 이미지 -->
@@ -85,4 +99,3 @@
     <!-- 추가적인 내용을 이어서 작성하세요 -->
 </body>
 </html>
-
