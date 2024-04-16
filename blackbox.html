@@ -126,6 +126,14 @@ nav {
             color: #c9c9c9; /* 코멘트 폰트 색을 밝은 회색으로 설정 */
             background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
         }
+
+         /* 스마트폰용 썸네일 이미지 스타일 */
+         @media only screen and (max-width: 600px) {
+            .thumbnail {
+                max-width: calc(50% - 5px); /* 스마트폰에서는 가로로 2개씩 배치 */
+                max-height: auto; /* 세로 높이 자동 조정 */
+            }
+        }
     </style>
 </head>
 <body>
