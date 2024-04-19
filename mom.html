@@ -67,6 +67,24 @@ nav {
     margin-left: 180px;
 }
 
+/* 비디오 썸네일 밑에 코멘트 스타일 */
+.video-thumbnail p {
+    text-align: match-parent; /* 가운데 정렬 */
+    margin-left: 200px;
+    margin-top: 10px; /* 위쪽 여백 추가 */
+    font-size: 14px; /* 폰트 크기 설정 */
+    color: #0026ff; /* 코멘트 색상 설정 */
+}
+
+/* 비디오 썸네일 이미지 스타일 */
+.video-thumbnail img {
+    margin-left: 200px; /* 왼쪽 여백을 auto로 설정하여 이미지를 가운데 정렬 */
+    margin-right: auto; /* 오른쪽 여백을 추가하여 이미지와 다른 콘텐츠 간의 간격을 조절 */
+    margin-top: 20px;
+    display: block; /* 이미지를 블록 요소로 설정하여 가운데 정렬 적용 */
+    max-width: 400px; /* 최대 너비를 부모 요소에 맞게 설정 */
+}
+
 .thumbnail {
     flex-grow: 1; /* 가능한 한 많은 공간을 차지하도록 설정 */
     flex-basis: calc(33.33% - 10px); /* 초기 크기 설정 및 간격 고려 */
@@ -132,11 +150,16 @@ nav {
             background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
         }
         /* 스마트폰용 썸네일 이미지 스타일 */
-        @media only screen and (max-width: 600px) {
+         @media only screen and (max-width: 600px) {
             .thumbnail {
                 max-width: 100%; /* 스마트폰에서는 가로로 2개씩 배치 */
                 max-height: auto; /* 세로 높이 자동 조정 */
             }
+            /* 동영상 썸네일 스타일 */
+.video-thumbnail img {
+    max-width: 100%; /* 동영상 썸네일 이미지를 부모 요소의 너비에 맞게 조정 */
+    height: auto; /* 세로 비율을 유지하면서 이미지의 높이를 자동 조정 */
+}
             
         }
     </style>
@@ -173,11 +196,14 @@ nav {
     <a href="contact.html" style="font-size: 16px; color: #696969; margin-top: 5px; margin-bottom: 5px; font-weight: bold;">Contact</a>
 </nav>
     
-   <!-- 유튜브 -->
-   <div class="video-thumbnail">
-    <a href="https://www.youtube.com/watch?v=oAnwuGj5x1M" target="_blank">
-        <img src="https://i.ytimg.com/vi/oAnwuGj5x1M/hqdefault.jpg" alt="유튜브 동영상 썸네일">
-    </a>
+<!-- 유튜브 -->
+<div class="video-thumbnail">
+    <div>
+        <a href="https://www.youtube.com/watch?v=oAnwuGj5x1M" target="_blank">
+            <img src="https://i.ytimg.com/vi/oAnwuGj5x1M/hqdefault.jpg" alt="유튜브 동영상 썸네일">
+        </a>
+        <p>Youtube link ↑</Mom></p>
+    </div>
 </div>
 
     <!-- 이미지 썸네일 -->
