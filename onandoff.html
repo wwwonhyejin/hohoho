@@ -149,23 +149,22 @@ nav {
             color: #c9c9c9; /* 코멘트 폰트 색을 밝은 회색으로 설정 */
             background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
         }
-        /* 스마트폰용 썸네일 이미지 스타일 */
-        @media only screen and (max-width: 600px) {
-            
-                         /* 동영상 썸네일 스타일 */
-.video-thumbnail img {
-    max-width: 100%; /* 동영상 썸네일 이미지를 부모 요소의 너비에 맞게 조정 */
-    height: auto; /* 세로 비율을 유지하면서 이미지의 높이를 자동 조정 */
-}
-
-            .thumbnail {
-                max-width: 100%; /* 스마트폰에서는 가로로 2개씩 배치 */
-                max-height: auto; /* 세로 높이 자동 조정 */
-            }
-             /* 동영상 썸네일 스타일 */
- 
+       
+        
+    /* 스마트폰용 썸네일 이미지 스타일 */
+    @media only screen and (max-width: 600px) {
+        .thumbnail {
+            max-width: 100%; /* 스마트폰에서는 가로로 2개씩 배치 */
+            max-height: auto; /* 세로 높이 자동 조정 */
         }
-    </style>
+        /* 동영상 썸네일 스타일 */
+        .video-thumbnail img {
+            max-width: 100%; /* 동영상 썸네일 이미지를 부모 요소의 너비에 맞게 조정 */
+            height: auto; /* 세로 비율을 유지하면서 이미지의 높이를 자동 조정 */
+        }
+    }
+
+</style>
 </head>
 <body>
     <!-- 네비게이션 바 -->
