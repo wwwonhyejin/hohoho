@@ -133,44 +133,7 @@ nav {
                 max-width: 100%; /* 스마트폰에서는 가로로 2개씩 배치 */
                 max-height: auto; /* 세로 높이 자동 조정 */
             }
-            // 이미지를 클릭한 좌표
-var startX = 0;
-var startY = 0;
-var endX = 0;
-var endY = 0;
-
-// 터치 시작 이벤트 핸들러
-function touchStart(event) {
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
-}
-
-// 터치 이동 이벤트 핸들러
-function touchMove(event) {
-    endX = event.touches[0].clientX;
-    endY = event.touches[0].clientY;
-}
-
-// 터치 종료 이벤트 핸들러
-function touchEnd() {
-    var diffX = endX - startX;
-    var diffY = endY - startY;
-
-    if (Math.abs(diffX) > Math.abs(diffY)) {
-        if (diffX > 0) {
-            // 오른쪽으로 스와이프한 경우 다음 이미지로 이동
-            nextImage();
-        } else {
-            // 왼쪽으로 스와이프한 경우 이전 이미지로 이동
-            prevImage();
-        }
-    }
-}
-
-// 이미지 요소에 터치 이벤트 핸들러 등록
-document.getElementById('large-image').addEventListener('touchstart', touchStart);
-document.getElementById('large-image').addEventListener('touchmove', touchMove);
-document.getElementById('large-image').addEventListener('touchend', touchEnd);
+            
         }
     </style>
 </head>
@@ -208,12 +171,12 @@ document.getElementById('large-image').addEventListener('touchend', touchEnd);
 
     <!-- 이미지 썸네일 -->
     <div class="thumbnail-container">
-        <img src="blackbox_1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="openLargeImage('blackbox_1.jpg', 'wood, mirror, LGD light 100x35x20cm')">
-        <img src="blackbox_2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="openLargeImage('blackbox_2.jpg', 'wood, mirror, LGD light 100x35x20cm')">
-        <img src="blackbox_3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="openLargeImage('blackbox_3.jpg', 'wood, mirror, LGD light 100x35x20cm')">
-        <img src="blackbox_4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="openLargeImage('blackbox_4.jpg', 'wood, mirror, LGD light 100x35x20cm')">
-        <img src="blackbox_5.jpg" alt="Thumbnail 4" class="thumbnail" onclick="openLargeImage('blackbox_5.jpg', 'wood, mirror, LGD light 100x35x20cm')">
-        <img src="blackbox_6.jpg" alt="Thumbnail 4" class="thumbnail" onclick="openLargeImage('blackbox_6.jpg', 'wood, mirror, LGD light 100x35x20cm')">
+        <img src="blackbox_1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="openLargeImage('blackbox_1.jpg', 'wood, mirror, LED light 100x35x20cm')">
+        <img src="blackbox_2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="openLargeImage('blackbox_2.jpg', 'wood, mirror, LED light 100x35x20cm')">
+        <img src="blackbox_3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="openLargeImage('blackbox_3.jpg', 'wood, mirror, LED light 100x35x20cm')">
+        <img src="blackbox_4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="openLargeImage('blackbox_4.jpg', 'wood, mirror, LED light 100x35x20cm')">
+        <img src="blackbox_5.jpg" alt="Thumbnail 4" class="thumbnail" onclick="openLargeImage('blackbox_5.jpg', 'wood, mirror, LED light 100x35x20cm')">
+        <img src="blackbox_6.jpg" alt="Thumbnail 4" class="thumbnail" onclick="openLargeImage('blackbox_6.jpg', 'wood, mirror, LED light 100x35x20cm')">
         
         <!-- 필요한 만큼 썸네일 이미지 추가 -->
     </div>
@@ -293,3 +256,35 @@ function hideCloseButton() {
 </body>
 </html>
 
+// 터치 시작 이벤트 핸들러
+function touchStart(event) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+}
+
+// 터치 이동 이벤트 핸들러
+function touchMove(event) {
+    endX = event.touches[0].clientX;
+    endY = event.touches[0].clientY;
+}
+
+// 터치 종료 이벤트 핸들러
+function touchEnd() {
+    var diffX = endX - startX;
+    var diffY = endY - startY;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX > 0) {
+            // 오른쪽으로 스와이프한 경우 다음 이미지로 이동
+            nextImage();
+        } else {
+            // 왼쪽으로 스와이프한 경우 이전 이미지로 이동
+            prevImage();
+        }
+    }
+}
+
+// 이미지 요소에 터치 이벤트 핸들러 등록
+document.getElementById('large-image').addEventListener('touchstart', touchStart);
+document.getElementById('large-image').addEventListener('touchmove', touchMove);
+document.getElementById('large-image').addEventListener('touchend', touchEnd);
