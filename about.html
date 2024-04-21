@@ -120,8 +120,9 @@
         }
         #about-section {
     text-align: justify; /* 텍스트 및 제목 가운데 정렬 */
-    margin-top: 10px; /* 위쪽 여백 설정 */
-    margin-left: 200px; /* 왼쪽 여백을 자동으로 조정하여 오른쪽으로 이동 */
+    margin-top: 30px; /* 위쪽 여백 설정 */
+    margin-left: 200px;
+    margin-right: 400px; /* 왼쪽 여백을 자동으로 조정하여 오른쪽으로 이동 */
 }
 
 #about-section h2 {
@@ -170,6 +171,18 @@
                 font-size: 14px; /* 내용 크기 줄이기 */
             }
         }
+        /* 미디어 쿼리 */
+        @media only screen and (max-width: 600px) {
+            /* 스마트폰용 스타일 */
+            
+            #contact-section p {
+                font-size: 12px; /* 폰트 크기를 더 작게 설정 */
+            text-align: right; /* 텍스트 오른쪽 정렬 */
+            margin-top: 10px; /* 위쪽 여백 설정 */
+            margin-bottom: 10px; /* 아래쪽 여백 설정 */
+            width: 20%; /* 텍스트의 너비를 설정하여 화면의 반쪽만 차지하도록 함 */
+        }
+        }
 
     </style>
 </head>
@@ -207,39 +220,19 @@
 
     <!-- About 섹션 -->
     <section id="about-section">
-        <h2>WON HYE JIN</h2>
-        <p>Born in South Korea. Lives and works in Berlin.</p>
-        <h2>Education</h2> 
-        <dt>2013-2016</dt> 
-        <dd>Giebichenstein Kunsthochschule, Prof. Ute Pleuger, Halle, Germany</dd>
-        <dt>2016-2024</dt> 
-        <dd>Universität der Künste (UdK), Prof. Thomas Zipp, Berlin, Germany</dd>
-        <h2>Group Exhibition</h2>
-<dl>
-    <dt>2024</dt>
-    <dd>Abschlussausstellung Bildende Kunst, UdK, Berlin</dd>
-    <dt>2019</dt>
-    <dd>Rundgang, UdK, Berlin</dd>
-    <dd>Das Schimpft, C1, Berlin</dd>
-    <dt>2018</dt>
-    <dd>Rundgang, UdK, Berlin</dd>
-    <dt>2017</dt>
-    <dd>Rundgang, UdK, Berlin</dd>
-    <dd>Orbits, Berlin Blue Art, Berlin</dd>
-    <dd>Camping at villa Grisebach, Villa Grisebach, Berlin</dd>
-    <dt>2016</dt>
-    <dd>Jahresausstellung, Giebichenstein Kunsthochschule, Halle</dd>
-    <dd>Kunststiftung des Landes Sachsen-Anhalt, Halle</dd>
-    <dt>2015</dt>
-    <dd> Jahresausstellung, Giebichenstein Kunsthochschule, Halle</dd>
-    <dd> D. Generation, Glogauair, Berlin</dd>
-    <dt>2014</dt> 
-    <dd>Jahresausstellung, Giebichenstein Kunsthochschule, Halle</dd>
-    <dd>Zukunft am Ostkreutz, Berlin</dd>
-    <dt>2012</dt>
-    <dd>2012 Draw The Line, Galerie Liebkranz, Berlin</dd>
-    <dt>2011</dt>
-    <dd>2011 Fresh, Das Hotel, Berlin</dd>
+        
+        <p style="font-size: 17px; color: #b6b6b6;">Won Hye-jin was born in Seoul and currently resides and works in Berlin.</p>
+            <h2></h2> 
+        <p style="font-size: 17px; color: #bbbbbb;">From 2013 to 2016, she studied at the Burg Giebichenstein University of 
+        Art and Design Halle. In 2016, she transferred to the Berlin University of the Arts, 
+        where she continued her studies until 2024, completing her master degree in February.</p>
+        <h2></h2> 
+        
+        <dd style="font-size: 17px; color: #bdbdbd;">In her art, she explores the human experience of suffering. 
+            Using various materials and forms, she creates spatial structures to visualize 
+            these concepts and establish a connection with the audience. 
+            Her work aims to convey comfort and hope, reflecting her profound engagement 
+            with human existence.</dd>
     
     </section>
 </body>
