@@ -13,6 +13,7 @@
             background-color: #fff; /* 전체 배경색을 하얀색으로 설정 */
             color: #333; /* 전체 텍스트 색상을 어두운 회색으로 설정 */
         }
+       
         /* 메뉴 스타일 */
         nav {
             background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
@@ -118,27 +119,27 @@
             color: #c9c9c9; /* 코멘트 폰트 색을 밝은 회색으로 설정 */
             background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
         }
-        /* 본문 내용을 가운데 정렬 */
-        #contact-section {
-            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
-            margin-top: 10px; /* 위쪽 여백 설정 */
-            margin-left: auto; /* 왼쪽 여백을 자동으로 조정하여 중앙으로 이동 */
-            margin-right: auto; /* 오른쪽 여백을 자동으로 조정하여 중앙으로 이동 */
+        /* 본문 내용을 오른쪽 정렬 */
+        #about-section {
+            text-align: left; /* 텍스트를 오른쪽 정렬 */
+            margin-top: 30px; /* 위쪽 여백 설정 */
+            margin-left: 200px; /* 왼쪽 여백 설정 */
+            margin-right: 100px; /* 오른쪽 여백 설정 */
         }
 
-        #contact-section h2 {
+        #about-section h2 {
             margin-left: 0; /* 왼쪽 여백을 0으로 설정하여 맞춤 */
             color: #888; /* 회색으로 색상 지정 */
             margin-bottom: 5px; /* 제목 아래쪽 여백 설정 */
         }
 
-        #contact-section p {
-            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
-    margin-top: 10px; /* 위쪽 여백 설정 */
-    margin: 10px auto; /* 상하 여백은 10px로 설정하고 좌우 여백은 자동으로 조정하여 중앙으로 이동 */
+        #about-section p {
+            text-align: left; /* 텍스트 오른쪽 정렬 */
+            margin-top: 30px; /* 위쪽 여백 설정 */
+            margin-bottom: 30px; /* 아래쪽 여백 설정 */
         }
 
-        #contact-section .contact-icon {
+        #about-section .contact-icon {
             display: inline-block; /* 아이콘을 옆으로 정렬 */
             margin: 10px; /* 아이콘 간격 설정 */
             font-size: 24px; /* 아이콘 크기 설정 */
@@ -148,20 +149,23 @@
         @media only screen and (max-width: 600px) {
             /* 스마트폰용 스타일 */
             
-            #contact-section p {
+            #about-section p {
                 font-size: 12px; /* 폰트 크기를 더 작게 설정 */
-            text-align: right; /* 텍스트 오른쪽 정렬 */
-            margin-top: 10px; /* 위쪽 여백 설정 */
-            margin-bottom: 10px; /* 아래쪽 여백 설정 */
-            width: 30%; /* 텍스트의 너비를 설정하여 화면의 반쪽만 차지하도록 함 */
-        }
+                text-align: left; /* 텍스트 오른쪽 정렬 */
+                margin-top: 10px; /* 위쪽 여백 설정 */
+                margin-bottom: 10px; /* 아래쪽 여백 설정 */
+                width: 30%; /* 텍스트의 너비를 설정하여 화면의 반쪽만 차지하도록 함 */
+            
+            }
         }
     </style>
 </head>
 <body>
     <!-- 네비게이션 바 -->
 <nav>
-    <a href="home.html" style="font-size: 20px; color: #0026ff; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">WON HYE JIN</a>
+
+    <a href="home.html" style="font-size: 20px; color: #0026ff; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">원 혜 진</a>
+
     <div id="works" class="sub-menu"  style="margin-bottom: 5px;">
         <span style="font-size: 16px; color: #666; margin-bottom: 10px; font-weight: bold;">Works</span>
         <div class="sub-menu">
@@ -193,32 +197,33 @@
     <!-- About 섹션 -->
     <section id="about-section">
         
-        <p style="font-size: 13px; color: #b6b6b6; text-align: left; margin-top: 30px; 
-        margin-left: 200px; margin-right: 100px; ">저는 서울에서 태어났으며, 현재 베를린에 거주하며 작업을 하고 있습니다. </p>
+        
+        <p style="font-size: 15px; color: #b6b6b6; text-align: left; margin-top: 30px; 
+        margin-left: 0px; margin-right: calc(100% - 400px);">저는 서울에서 태어났으며, 현재 베를린에 거주하며 작업을 하고 있습니다. </p>
             <h2></h2> 
-        <p style="font-size: 13px; color: #b6b6b6; text-align: left; margin-top: 30px; 
-        margin-left: 200px; margin-right: 100px; ">2013년부터 2016년까지 독일 Burg Giebichenstein Kunsthochschule Halle 에서 
+        <p style="font-size: 15px; color: #b6b6b6; text-align: left; margin-top: 30px; 
+        margin-left: 0px; margin-right: calc(100% - 400px);">2013년부터 2016년까지 독일 Burg Giebichenstein Kunsthochschule Halle 에서 
         회화, 2016년부터 Universität der Künste Berlin 에서 시각예술을 전공하고, 2024년에 Meister 졸업을 하였습니다. 
          </p>
         <h2></h2> 
-        <p style="font-size: 13px; color: #b6b6b6; text-align: left; margin-top: 30px; 
-        margin-left: 200px; margin-right: 100px; ">저의 작업은 인간의 비애와 고통에 대한 탐구에서 출발합니다. 
+        <p style="font-size: 15px; color: #b6b6b6; text-align: left; margin-top: 30px; 
+        margin-left: 0px; margin-right: calc(100% - 400px);">저의 작업은 인간의 비애와 고통에 대한 탐구에서 출발합니다. 
             제 작품의 담론에는 인간의 다양한 감정과 인식의 개념들이 자리잡고 있고 현실과 연결되는 
             삶에 대한 저의 내적 고민이 반영되어 있습니다. 저는 다양한 형식과 재료를 통해 작업을 공간화하고 시각화하여 
             관람자와 공감대를 형성하기를 기대하며 더 나아가 각자의 스스로를 사유하는 시간을 만들어내고자 합니다. 
              </p>
             <h2></h2> 
 
-        <p style="font-size: 15px; color: #b6b6b6; text-align: left; margin-top: 30px; 
-        margin-left: 200px; margin-right: 100px; ">Won Hye-jin was born in Seoul and currently resides and works in Berlin.</p>
+        <p style="font-size: 17px; color: #b6b6b6; text-align: left; margin-top: 30px; 
+        margin-left: 0px; margin-right: calc(100% - 400px);">Won Hye-jin was born in Seoul and currently resides and works in Berlin.</p>
             <h2></h2> 
-        <p style="font-size: 15px; color: #b6b6b6; text-align: left; margin-top: 30px; 
-        margin-left: 200px; margin-right: 100px; ">From 2013 to 2016, she studied at the Burg Giebichenstein Kunsthochschule Halle. 
-        In 2016, she transferred to the Universität der Künste Berlin, 
+        <p style="font-size: 17px; color: #b6b6b6; text-align: left; margin-top: 30px; 
+        margin-left: 0px; margin-right: calc(100% - 400px);">From 2013 to 2016, she studied at Burg Giebichenstein Kunsthochschule Halle. 
+        In 2016, she transferred to Universität der Künste Berlin, 
         where she continued her studies until 2024, completing her meisterschülerin in February.</p>
         <h2></h2> 
-        <p style="font-size: 15px; color: #b6b6b6; text-align: left; margin-top: 30px; 
-        margin-left: 200px; margin-right: 100px; "> In her art, she explores the human experience of suffering. 
+        <p style="font-size: 17px; color: #b6b6b6; text-align: left; margin-top: 30px; 
+        margin-left: 0px; margin-right: calc(100% - 400px);"> In her art, she explores the human experience of suffering. 
         Using various materials and forms, she creates spatial structures to visualize 
         these concepts and establish a connection with the audience. 
         Her work aims to convey comfort and hope, reflecting her profound engagement 
@@ -230,4 +235,3 @@
     </section>
 </body>
 </html>
-
