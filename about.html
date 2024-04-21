@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Part 2 - WON HYE JIN Portfolio</title>
-        <style>
-            /* 전체 스타일 */
-            body {
-                font-family: 'PT Serif', serif; /* PT Serif 폰트로 변경 */
-                margin: 0;
-                padding: 0;
-                background-color: #fff; /* 전체 배경색을 하얀색으로 설정 */
-                color: #333; /* 전체 텍스트 색상을 어두운 회색으로 설정 */
-            }
-            /* 메뉴 스타일 */
-            nav {
-                background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
-                position: fixed; /* 고정 위치 설정 */
-                top: 0; /* 위쪽에 붙이기 */
-                left: 0; /* 왼쪽에 붙이기 */
-                padding: 10px;
-                z-index: 2; /* 다른 요소 위에 표시하기 위해 인덱스 설정 */
-                display: flex; /* 세로로 정렬하기 위해 flex 사용 */
-                flex-direction: column; /* 세로로 정렬 */
-            }
-            nav a {
-                color: #333; /* 메뉴 항목 텍스트 색상을 진한 회색으로 설정 */
-                text-decoration: none;
-                margin: 10px 0; /* 항목 사이의 간격 설정 */
-                font-size: 14px; /* 글씨 크기를 작게 설정 */
-            }
-            nav a:hover {
-                color: #000; /* 메뉴 항목 텍스트 색상을 검정색으로 설정 */
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WON HYE JIN Portfolio</title>
+    <style>
+        /* 전체 스타일 */
+        body {
+            font-family: 'PT Serif', serif; /* PT Serif 폰트로 변경 */
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* 전체 배경색을 하얀색으로 설정 */
+            color: #333; /* 전체 텍스트 색상을 어두운 회색으로 설정 */
+        }
+        /* 메뉴 스타일 */
+        nav {
+            background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
+            position: fixed; /* 고정 위치 설정 */
+            top: 0; /* 위쪽에 붙이기 */
+            left: 0; /* 왼쪽에 붙이기 */
+            padding: 10px;
+            z-index: 2; /* 다른 요소 위에 표시하기 위해 인덱스 설정 */
+            display: flex; /* 세로로 정렬하기 위해 flex 사용 */
+            flex-direction: column; /* 세로로 정렬 */
+        }
+        nav a {
+            color: #333; /* 메뉴 항목 텍스트 색상을 진한 회색으로 설정 */
+            text-decoration: none;
+            margin: 10px 0; /* 항목 사이의 간격 설정 */
+            font-size: 14px; /* 글씨 크기를 작게 설정 */
+        }
+        nav a:hover {
+            color: #000; /* 메뉴 항목 텍스트 색상을 검정색으로 설정 */
+        }
         /* Works 하위 메뉴 스타일 */
         .sub-menu {
             display: block; /* 항상 보이게 설정 */
@@ -118,50 +118,43 @@
             color: #c9c9c9; /* 코멘트 폰트 색을 밝은 회색으로 설정 */
             background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
         }
-        #about-section {
-    text-align: justify; /* 텍스트 및 제목 가운데 정렬 */
-    margin-top: 30px; /* 위쪽 여백 설정 */
-    margin-left: 200px;
-    margin-right: 400px; /* 왼쪽 여백을 자동으로 조정하여 오른쪽으로 이동 */
-}
+        /* 본문 내용을 가운데 정렬 */
+        #contact-section {
+            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
+            margin-top: 10px; /* 위쪽 여백 설정 */
+            margin-left: auto; /* 왼쪽 여백을 자동으로 조정하여 중앙으로 이동 */
+            margin-right: auto; /* 오른쪽 여백을 자동으로 조정하여 중앙으로 이동 */
+        }
 
-#about-section h2 {
-    margin-left: 0; /* 왼쪽 여백을 0으로 설정하여 맞춤 */
-    color: #888; /* 회색으로 색상 지정 */
-    margin-bottom: 5px; /* 제목 아래쪽 여백 설정 */
-}
+        #contact-section h2 {
+            margin-left: 0; /* 왼쪽 여백을 0으로 설정하여 맞춤 */
+            color: #888; /* 회색으로 색상 지정 */
+            margin-bottom: 5px; /* 제목 아래쪽 여백 설정 */
+        }
 
-#about-section p {
-    text-align: justify; /* 텍스트 맞춤 설정 */
-    margin: 0 auto 5px auto; /* 왼쪽과 오른쪽 여백 자동 조정 및 아래 여백 설정 */
-}
+        #contact-section p {
+            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
+    margin-top: 10px; /* 위쪽 여백 설정 */
+    margin: 10px auto; /* 상하 여백은 10px로 설정하고 좌우 여백은 자동으로 조정하여 중앙으로 이동 */
+        }
 
-#about-section dl {
-    text-align: left; /* 내용은 왼쪽 정렬 */
-}
-
-#about-section dt {
-    font-weight: bold; /* 년도는 볼드체로 표시 */
-    margin-top: 20px; /* 년도 위쪽 여백 늘리기 */
-    margin-bottom: 10px; /* 년도 아래쪽 여백 늘리기 */
-    color: #888; /* 년도 색상 회색으로 설정 */
-}
-
-#about-section dd {
-    margin-left: 0; /* 내용을 왼쪽으로 이동하여 제목과 맞춤 */
-    margin-bottom: 7px; /* 각 내용 아래쪽 여백 늘리기 */
-}
-
-       /* 미디어 쿼리 */
-       @media only screen and (max-width: 600px) {
+        #contact-section .contact-icon {
+            display: inline-block; /* 아이콘을 옆으로 정렬 */
+            margin: 10px; /* 아이콘 간격 설정 */
+            font-size: 24px; /* 아이콘 크기 설정 */
+            color: #333; /* 아이콘 색상 설정 */
+        }
+        /* 미디어 쿼리 */
+        @media only screen and (max-width: 600px) {
             /* 스마트폰용 스타일 */
+            
             #contact-section p {
-                font-size: 10px; /* 폰트 크기를 10px로 설정 */
-                text-align: left; /* 텍스트 가운데 정렬 */
-                margin-top: 10px; /* 위쪽 여백 설정 */
-                margin-left: 100px; /* 왼쪽 여백 설정 */
-                margin-right: 2px; /* 오른쪽 여백 설정 */
-            }
+                font-size: 12px; /* 폰트 크기를 더 작게 설정 */
+            text-align: right; /* 텍스트 오른쪽 정렬 */
+            margin-top: 10px; /* 위쪽 여백 설정 */
+            margin-bottom: 10px; /* 아래쪽 여백 설정 */
+            width: 20%; /* 텍스트의 너비를 설정하여 화면의 반쪽만 차지하도록 함 */
+        }
         }
     </style>
 </head>
@@ -200,6 +193,12 @@
     <!-- About 섹션 -->
     <section id="about-section">
         
+        <p style="font-size: 17px; color: #b6b6b6;">원혜진은 서울에서 태어나 베를린에서 살며 작업을 하고 있습니다. </p>
+            <h2></h2> 
+        <p style="font-size: 17px; color: #bbbbbb;">2013년부터 2016년까지 독일 할레에 위치한 Giebichenstein 대학에서 페인팅을 전공하고 
+        2016년부터 베를린 예술대학에서 시각예술을    </p>
+        <h2></h2> 
+
         <p style="font-size: 17px; color: #b6b6b6;">Won Hye-jin was born in Seoul and currently resides and works in Berlin.</p>
             <h2></h2> 
         <p style="font-size: 17px; color: #bbbbbb;">From 2013 to 2016, she studied at the Burg Giebichenstein University of 
