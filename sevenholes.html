@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - WON HYE JIN Portfolio</title>
+    <title>Self Portrait - WON HYE JIN Portfolio</title>
     <style>
         /* 전체 스타일 */
         body {
@@ -13,17 +13,18 @@
             background-color: #fff; /* 전체 배경색을 하얀색으로 설정 */
             color: #333; /* 전체 텍스트 색상을 어두운 회색으로 설정 */
         }
+
         /* 메뉴 스타일 */
-        nav {
-            background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
-            position: fixed; /* 고정 위치 설정 */
-            top: 0; /* 위쪽에 붙이기 */
-            left: 0; /* 왼쪽에 붙이기 */
-            padding: 10px;
-            z-index: 2; /* 다른 요소 위에 표시하기 위해 인덱스 설정 */
-            display: flex; /* 세로로 정렬하기 위해 flex 사용 */
-            flex-direction: column; /* 세로로 정렬 */
-        }
+nav {
+    background-color: transparent; /* 메뉴 바 배경색을 투명으로 설정 */
+    position: fixed; /* 고정 위치 설정 */
+    top: 0; /* 위쪽에 붙이기 */
+    left: 0; /* 왼쪽에 붙이기 */
+    padding: 10px;
+    z-index: 0; /* 이미지보다 아래에 표시되도록 설정 */
+    display: flex; /* 세로로 정렬하기 위해 flex 사용 */
+    flex-direction: column; /* 세로로 정렬 */
+}
         nav a {
             color: #333; /* 메뉴 항목 텍스트 색상을 진한 회색으로 설정 */
             text-decoration: none;
@@ -52,20 +53,27 @@
             color: #000; /* 하위 메뉴 텍스트 색상을 검정색으로 설정 */
         }
         /* 이미지 썸네일 스타일 */
-        .thumbnail-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px; /* 이미지 사이의 간격을 아주 좁게 설정 */
-            padding: 20px;
-            margin-left: 180px;
-        }
-        .thumbnail {
-            width: 400px; /* 이미지 크기를 더 크게 설정 */
-            height: auto;
-            border-radius: 0px; /* 모서리를 각지게 설정 */
-            cursor: pointer;
-        }
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px; /* 이미지 사이의 간격을 아주 좁게 설정 */
+    padding: 20px;
+    margin-left: 180px;
+}
+
+.thumbnail {
+    flex-grow: 1; /* 가능한 한 많은 공간을 차지하도록 설정 */
+    flex-basis: calc(33.33% - 10px); /* 초기 크기 설정 및 간격 고려 */
+    max-width: 400px; /* 최대 가로 너비를 지정 */
+    max-height: 600px; /* 최대 세로 높이를 지정 */
+    width: auto; /* 가로 크기 자동 조정 */
+    height: auto; /* 세로 크기 자동 조정 */
+    border-radius: 0px; /* 모서리를 각지게 설정 */
+    cursor: pointer;
+    object-fit: cover; /* 이미지가 영역에 맞게 크기가 조절되도록 설정 */
+    z-index: 1; /* 이미지가 메뉴보다 위에 표시되도록 설정 */
+}
         /* 큰 이미지 스타일 */
         #large-image-container {
             display: none;
@@ -92,7 +100,7 @@
             top: 10px;
             right: 20px;
             cursor: pointer;
-            color: #fff;
+            color: #808080; /* 엑스 표시의 색상을 중간 회색으로 설정 */
             font-size: 24px;
         }
         /* 화살표 스타일 */
@@ -102,7 +110,7 @@
             transform: translateY(-50%);
             cursor: pointer;
             font-size: 36px;
-            color: #fff;
+            color: #808080; /* 화살표 색상을 중간 회색으로 설정 */
         }
         #prev-arrow {
             left: 10px;
@@ -118,43 +126,14 @@
             color: #c9c9c9; /* 코멘트 폰트 색을 밝은 회색으로 설정 */
             background-color: none; /* 코멘트 배경색을 흰색으로 설정 */
         }
-        /* 본문 내용을 가운데 정렬 */
-        #contact-section {
-            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
-            margin-top: 10px; /* 위쪽 여백 설정 */
-            margin-left: auto; /* 왼쪽 여백을 자동으로 조정하여 중앙으로 이동 */
-            margin-right: auto; /* 오른쪽 여백을 자동으로 조정하여 중앙으로 이동 */
-        }
 
-        #contact-section h2 {
-            margin-left: 0; /* 왼쪽 여백을 0으로 설정하여 맞춤 */
-            color: #888; /* 회색으로 색상 지정 */
-            margin-bottom: 5px; /* 제목 아래쪽 여백 설정 */
-        }
-
-        #contact-section p {
-            text-align: center; /* 텍스트 및 아이콘 가운데 정렬 */
-    margin-top: 10px; /* 위쪽 여백 설정 */
-    margin: 10px auto; /* 상하 여백은 10px로 설정하고 좌우 여백은 자동으로 조정하여 중앙으로 이동 */
-        }
-
-        #contact-section .contact-icon {
-            display: inline-block; /* 아이콘을 옆으로 정렬 */
-            margin: 10px; /* 아이콘 간격 설정 */
-            font-size: 24px; /* 아이콘 크기 설정 */
-            color: #333; /* 아이콘 색상 설정 */
-        }
-        /* 미디어 쿼리 */
-        @media only screen and (max-width: 600px) {
-            /* 스마트폰용 스타일 */
+         /* 스마트폰용 썸네일 이미지 스타일 */
+         @media only screen and (max-width: 600px) {
+            .thumbnail {
+                max-width: 100%; /* 스마트폰에서는 가로로 2개씩 배치 */
+                max-height: auto; /* 세로 높이 자동 조정 */
+            }
             
-            #contact-section p {
-                font-size: 12px; /* 폰트 크기를 더 작게 설정 */
-            text-align: right; /* 텍스트 오른쪽 정렬 */
-            margin-top: 10px; /* 위쪽 여백 설정 */
-            margin-bottom: 10px; /* 아래쪽 여백 설정 */
-            width: 20%; /* 텍스트의 너비를 설정하여 화면의 반쪽만 차지하도록 함 */
-        }
         }
     </style>
 </head>
@@ -191,13 +170,86 @@
     <a href="contact.html" style="font-size: 16px; color: #696969; margin-top: 5px; margin-bottom: 5px; font-weight: bold;">Contact</a>
 </nav>
 
-  <!-- Contact 섹션 -->
-  <section id="contact-section"  style="text-align: center; margin-top: 50px; margin-bottom: 50px;">
-    
-    <!-- 이메일 링크 -->
-    <p><a href="mailto:studio.wonhyejin@gmail.com" style="color: #2ea050;">studio.wonhyejin@gmail.com</a></p>
-    <!-- 인스타그램 링크 -->
-    <p><a href="https://www.instagram.com/studio.wonhyejin" style="color: #ff69b4;">https://www.instagram.com/studio.wonhyejin</a></p>
-</section>
+    <!-- 이미지 썸네일 -->
+    <div class="thumbnail-container">
+        <img src="sevenholes_1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="openLargeImage('sevenholes_1.jpg', 'Acryl on canvas 100x130cm')">
+        <img src="sevenholes_2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="openLargeImage('sevenholes_2.jpg', 'Acryl on canvas 100x130cm')">
+       
+        
+        <!-- 필요한 만큼 썸네일 이미지 추가 -->
+    </div>
+
+
+    <!-- 큰 이미지 화면 -->
+    <div id="large-image-container">
+        <span id="close-btn" onclick="closeLargeImage()">×</span>
+        <img id="large-image">
+        <figcaption id="image-caption"></figcaption> <!-- 이미지 설명을 표시할 요소 추가 -->
+        <span class="arrow" id="prev-arrow" onclick="prevImage()">&#10094;</span>
+        <span class="arrow" id="next-arrow" onclick="nextImage()">&#10095;</span>
+    </div>
+
+    <script>
+        var images = ['sevenholes_1.jpg', 'sevenholes_2.jpg' ]; // 이미지 배열
+        var imageComments = ['<Self-portrait> 2024, Acryl on canvas 100x130cm', '<Self-portrait> 2024, Acryl on canvas 100x130cm']; // 각 이미지에 대한 코멘트 배열
+        var currentImageIndex = 0; // 현재 이미지 인덱스
+
+        // 큰 이미지 화면 열기
+function openLargeImage(imageUrl, comment) {
+    document.getElementById('large-image').src = imageUrl;
+    document.getElementById('image-caption').textContent = comment; // 이미지 설명 업데이트
+    document.getElementById('large-image-container').style.display = 'block';
+    currentImageIndex = images.indexOf(imageUrl);
+    updateArrowVisibility();
+    showCloseButton(); // 닫기 버튼 보이기
+}
+
+// 큰 이미지 화면 닫기
+function closeLargeImage() {
+    document.getElementById('large-image-container').style.display = 'none';
+    hideCloseButton(); // 닫기 버튼 숨기기
+}
+
+// 닫기 버튼 보이기
+function showCloseButton() {
+    document.getElementById('close-btn').style.display = 'block';
+}
+
+// 닫기 버튼 숨기기
+function hideCloseButton() {
+    document.getElementById('close-btn').style.display = 'none';
+}
+
+        // 이전 이미지로 이동
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            document.getElementById('large-image').src = images[currentImageIndex];
+            document.getElementById('image-caption').textContent = imageComments[currentImageIndex];
+            updateArrowVisibility();
+        }
+
+        // 다음 이미지로 이동
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById('large-image').src = images[currentImageIndex];
+            document.getElementById('image-caption').textContent = imageComments[currentImageIndex];
+            updateArrowVisibility();
+        }
+
+        // 화살표 가시성 업데이트
+        function updateArrowVisibility() {
+            if (currentImageIndex === 0) {
+                document.getElementById('prev-arrow').style.display = 'none';
+            } else {
+                document.getElementById('prev-arrow').style.display = 'block';
+            }
+            if (currentImageIndex === images.length - 1) {
+                document.getElementById('next-arrow').style.display = 'none';
+            } else {
+                document.getElementById('next-arrow').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
+
