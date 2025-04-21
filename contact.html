@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>원혜진 포트폴리오</title>
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <style>
+    /* 부드러운 스크롤 */
+    html { scroll-behavior: smooth; }
+    /* 기본 스타일 */
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #000; background: #fff; }
+    a { text-decoration: none; color: inherit; }
+
+    /* 헤더 */
+    header { position: sticky; top: 0; background: #fff; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 0.3rem 1rem; border-bottom: 1px solid #eaeaea; }
+    .logo { font-size: 1.2rem; font-weight: 700; line-height: 1.1; }
+    .logo span { display: block; font-size: 0.9rem; font-weight: normal; margin-top: 0.05rem; }
+
+    /* 네비게이션 */
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; }
+    nav li a { font-size: 0.9rem; text-transform: uppercase; font-weight: 600; }
+
+    /* 메인 콘텐츠 */
+    main { max-width: 800px; margin: 1rem auto; padding: 0 1rem; }
+    section { margin-bottom: 2rem; text-align: center; padding: 4rem 1rem; }
+    section p { margin: 0.5rem 0; font-size: 1rem; }
+
+    /* 반응형 */
+    @media (max-width: 600px) {
+      header { padding: 0.3rem 0.8rem; }
+      nav ul { justify-content: center; }
+      section { padding: 2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">원혜진<br><span>Hye-Jin Won</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Contact Section -->
+    <section id="contact">
+      <p>Email: <a href="mailto:studio.wonhyejin@gmail.com">studio.wonhyejin@gmail.com</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/studio.wonhyejin" target="_blank">studio.wonhyejin</a></p>
+    </section>
+  </main>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true, autoplayVideos: false, closeButton: true });
+  </script>
+</body>
+</html>
