@@ -39,6 +39,15 @@
     @media (max-width: 600px) {
       section.work { grid-template-columns: 1fr; margin-bottom: 0.8rem; gap: 0.5rem; }
       header { padding: 0.5rem 0.8rem; }
+      /* 모바일용 텍스트 크기 조정 */
+      section.work h2 { font-size: 1.6rem; line-height: 1.4; }
+      .meta, .details { font-size: 1rem; line-height: 1.4; }
+      /* 터치 영역 확대 */
+      .menu-btn, .close-btn { padding: 0.8rem; font-size: 1.2rem; }
+      /* 네비게이션 풀스크린 전환 */
+      nav { width: 100%; padding: 2rem; }
+    }
+      header { padding: 0.5rem 0.8rem; }
     }
 
     /* GLightbox 화살표 항상 표시 */
@@ -150,6 +159,81 @@
       </div>
     </section>
 
+    <section class="work">
+      <div>
+        <h2>Desire & Fragments</h2>
+        <div class="meta">[2024] painting and sculpture &bull; 
+          acryl on canvas, 160x200cm &bull; various materials on a wooden panel, 27x35cm each &bull;
+          Plush toy, plastic flowers, silicone, rhinestones, wood, mirror paper, 
+          dead flies, transparent tape, styrofoam, salt, 
+          red pepper powder, artificial wig, synthetic cotton, LEGO, plastic cup, insect  </div>
+        <div class="details">Large-format paintings and mixed-material sculptures are displayed together 
+          in a space.</div>
+    </div>
+    <div class="image">
+      <a href="018.jpg" class="glightbox" data-gallery="project5">
+        <img src="018.jpg" alt="Tears of Mokpo">
+      </a>
+      <a href="0181.jpg" class="glightbox" data-gallery="project5" style="display:none;"></a>
+      <a href="0182.jpg" class="glightbox" data-gallery="project5" style="display:none;"></a>
+      <a href="0183.jpg" class="glightbox" data-gallery="project5" style="display:none;"></a>
+    </div>
+  </section>
+
+  <section class="work">
+    <div>
+      <h2>Two Seats 2018</h2>
+        <div class="meta">[2018] participatory installation &bull; 
+          300x300x300cm &bull; a wooden room, two lamps, two chairs, and a two-way mirror.  </div>
+        <div class="details">
+          In a dark wooden room with two doors, two chairs face each other with a two-way 
+          mirror between them. Two visitors enter, close the doors, and sit down.</div>
+  </div>
+  <div class="image">
+    <a href="004.jpg" class="glightbox" data-gallery="project6">
+      <img src="004.jpg" alt="Tears of Mokpo">
+    </a>
+    <a href="twoseats01.jpg" class="glightbox" data-gallery="project6" style="display:none;"></a>
+    <a href="twoseats02.jpg" class="glightbox" data-gallery="project6" style="display:none;"></a>
+    <a href="twoseats03.jpg" class="glightbox" data-gallery="project6" style="display:none;"></a>
+    <a href="twoseats04.jpg" class="glightbox" data-gallery="project6" style="display:none;"></a>
+  </div>
+</section>
+
+<section class="work">
+  <div>
+    <h2>Splinter. 2</h2>
+    <div class="meta">[2017] performative sculpture &bull; metal, paper mirrors</div>
+    <div class="details">
+        Performance inside a sculpture made of hexagonal frames combined with mirrors.</div>
+</div>
+<div class="image">
+  <a href="IMG_0064.jpg" class="glightbox" data-gallery="project7">
+    <img src="IMG_0064.jpg" alt="Tears of Mokpo">
+  </a>
+  <a href="026.jpg" class="glightbox" data-gallery="project7" style="display:none;"></a>
+  <a href="036.jpg" class="glightbox" data-gallery="project7" style="display:none;"></a>
+  <a href="https://youtu.be/jtOnNMqebNc" class="glightbox" data-gallery="project7" data-type="video" style="display:none;"></a>
+</div>
+</section>
+
+
+<section class="work">
+  <div>
+    <h2>Splinter. 1</h2>
+    <div class="meta">[2017] wearable sculpture &bull; plastic, paper mirrors.</div>
+    <div class="details"> Masks made of combinations of hexagonal frames and mirrors.</div>
+</div>
+<div class="image">
+  <a href="014.jpg" class="glightbox" data-gallery="project8">
+    <img src="014.jpg" alt="Tears of Mokpo">
+  </a>
+  <a href="012.jpg" class="glightbox" data-gallery="project8" style="display:none;"></a>
+  <a href="013.jpg" class="glightbox" data-gallery="project8" style="display:none;"></a>
+</div>
+</section>
+
+
   </main>
 
   <!-- GLightbox JS -->
@@ -166,4 +250,4 @@
     const lightbox = GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true, autoplayVideos: false });
   </script>
 </body>
-</html>
+</html> 
