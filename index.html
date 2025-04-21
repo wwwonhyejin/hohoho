@@ -13,27 +13,47 @@
     /* 숨긴 갤러리 아이템을 CSS로만 숨김 */
     .glightbox-hidden { display: none; }
 
-    /* 헤더 및 네비게이션 */
-    header {
-      position: sticky; top: 0; background: #fff; z-index: 1000;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.3rem 1rem; border-bottom: 1px solid #eaeaea;
+ /* 헤더 */
+ header { position: sticky; top: 0; background: #fff; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 0.3rem 1rem; border-bottom: 1px solid #eaeaea; }
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      display: inline-flex;
+      align-items: baseline;
     }
-    .logo { font-size: 1.2rem; font-weight: 700; line-height: 1.1; }
-    .logo span { display: block; font-size: 0.9rem; font-weight: normal; margin-top: 0.05rem; }
+    .logo span {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-left: 0.5rem;
+      display: inline;
+    }
 
-    /* 네비게이션 메뉴 */
-    nav { display: block; position: static; }
+    /* 네비게이션 */
     nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; }
     nav li a { font-size: 0.9rem; text-transform: uppercase; font-weight: 600; }
 
+    nav li a { font-size: 0.9rem; text-transform: uppercase; font-weight: 600; }
+
     /* 메인 콘텐츠 */
-    main { max-width: 800px; margin: 1rem auto; padding: 0 1rem; }
-    section.work { display: grid; grid-template-columns: 1fr 2fr; gap: 0.8rem; margin-bottom: 1rem; align-items: start; }
-    section.work h2 { font-size: 1.5rem; margin: 0 0 1rem 0; line-height: 1; font-weight: 700; letter-spacing: -0.02em; }
-    .meta { font-size: 0.85rem; font-weight: 600; color: #bbb; margin: 0.75rem 0; line-height: 1.2; }
-    .details { font-size: 0.9rem; margin: 0.75rem 0; line-height: 1.2; }
+    main { max-width: 800px; margin: 3rem auto; padding: 0 1rem; }
+    section.work { display: grid; grid-template-columns: 1fr 3fr; gap: 0.8rem; margin-bottom: 1rem; align-items: start; }
+    section.work h2 { font-size: 1.2rem; margin: 0 0 1rem 0; line-height: 1; font-weight: 650; letter-spacing: -0.02em; }
+    .meta { font-size: 0.75rem; font-weight: 600; color: #bbb; margin: 0.75rem 0; line-height: 1.1; }
+    .details { font-size: 0.9rem; font-weight: 400; margin: 0.75rem 0; line-height: 1.1; }
     .image img { width: 100%; height: auto; border: 1px solid #eaeaea; cursor: pointer; }
+
+          /* 모바일: 모든 텍스트 요소 줄간격 및 문단 간격 축소 */
+          section h2,
+      section p,
+      .meta,
+      .details,
+      nav li a {
+        margin: 0.2rem 0 !important;
+        line-height: 1.2 !important;
+      }
+
+
 
     /* 반응형 */
     @media (max-width: 600px) {
