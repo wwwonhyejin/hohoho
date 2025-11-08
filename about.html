@@ -1,76 +1,230 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>원혜진 포트폴리오</title>
-  <!-- GLightbox CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  <style>
-    /* 부드러운 스크롤 */
-    html { scroll-behavior: smooth; }
-    /* 기본 스타일 */
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #000; background: #fff; }
-    a { text-decoration: none; color: inherit; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원혜진 포트폴리오</title>
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <style>
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+        }
 
- /* 헤더 */
- header { position: sticky; top: 0; background: #fff; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 0.3rem 1rem; border-bottom: 1px solid #eaeaea; }
-    .logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      line-height: 1.1;
-      display: inline-flex;
-      align-items: baseline;
-    }
-    .logo span {
-      font-size: 1rem;
-      font-weight: normal;
-      margin-left: 0.5rem;
-      display: inline;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* 숨긴 갤러리 아이템을 CSS로만 숨김 */
+        .glightbox-hidden {
+            display: none;
+        }
 
-    /* 네비게이션 */
-    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; }
-    nav li a { font-size: 0.9rem; text-transform: uppercase; font-weight: 600; }
+        /* 헤더 */
+        header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.3rem 1rem;
+            border-bottom: 1px solid #eaeaea;
+        }
 
-    /* 메인 콘텐츠 */
-    main { max-width: 800px; margin: 1rem auto; padding: 0 1rem; }
-    section { margin-bottom: 2rem; text-align: center; padding: 4rem 1rem; }
-    section p { margin: 0.5rem 0; font-size: 1rem; }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            display: inline-flex;
+            align-items: baseline;
+        }
 
-    /* 반응형 */
-    @media (max-width: 600px) {
-      header { padding: 0.3rem 0.8rem; }
-      nav ul { justify-content: center; }
-      section { padding: 2rem 1rem; }
-    }
-  </style>
+            .logo span {
+                font-size: 1rem;
+                font-weight: normal;
+                margin-left: 0.5rem;
+                display: inline;
+            }
+
+        /* 네비게이션 */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav li a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        nav li a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* 메인 콘텐츠 */
+        main {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        section.work {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1.8rem;
+            margin-bottom: 1rem;
+            align-items: start;
+        }
+
+            section.work h2 {
+                font-size: 1.3rem;
+                margin: 0 0 1rem 0;
+                line-height: 1;
+                font-weight: 650;
+                letter-spacing: -0.02em;
+            }
+
+        .meta {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #bbb;
+            margin: 0.75rem 0;
+            line-height: 1.1;
+        }
+
+        .details {
+            font-size: 0.9rem;
+            font-weight: 450;
+            margin: 0.75rem 0;
+            line-height: 1.1;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eaeaea;
+            cursor: pointer;
+        }
+
+        /* 모바일: 모든 텍스트 요소 줄간격 및 문단 간격 축소 */
+        section h2,
+        section p,
+        .meta,
+        .details,
+        nav li a {
+            margin: 0.2rem 0 !important;
+            line-height: 1.2 !important;
+        }
+
+
+
+        /* 반응형 */
+        @media (max-width: 600px) {
+            header {
+                padding: 0.3rem 0.8rem;
+            }
+
+            nav {
+                display: flex !important;
+                justify-content: center;
+                padding: 0.5rem 0;
+                background: #fff;
+            }
+
+                nav ul {
+                    gap: 1rem;
+                }
+
+            section.work {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                margin-bottom: 0.8rem;
+            }
+
+                section.work h2 {
+                    font-size: 1.6rem;
+                    line-height: 1.4;
+                }
+
+            .meta, .details {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+
+            .menu-btn, .close-btn {
+                display: none;
+            }
+        }
+
+        /* GLightbox 화살표 및 닫기 버튼 표시 */
+        .glightbox-container, .glightbox-body {
+            overflow: visible !important;
+        }
+
+            .glightbox-container .gprev, .glightbox-container .gnext, .glightbox-container .gclose {
+                display: flex !important;
+                opacity: 1 !important;
+                width: 40px;
+                height: 40px;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                z-index: 10000 !important;
+            }
+
+            .glightbox-container .gclose {
+                top: 10px !important;
+                right: 10px !important;
+                width: 30px;
+                height: 30px;
+            }
+
+            .glightbox-container .gprev {
+                left: 10px !important;
+            }
+
+            .glightbox-container .gnext {
+                right: 10px !important;
+            }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">원혜진<br><span>Hye-Jin Won</span></div>
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="archive.html">ARCHIVE</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-    </nav>
-  </header>S
+    <header>
+        <div class="logo">원혜진<br><span>Hye-Jin Won</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="archive.html">ARCHIVE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <!-- About Section -->
-    <section id="about" style="text-align:center; padding:4rem 1rem;">
-        <p>원혜진입니다. 작성중 </p>
-      </section>
-  
-  </main>
+    <main>
+        <!-- About Section -->
+        <section id="about" style="text-align:center; padding:4rem 1rem;">
+            <p>원혜진입니다. 작성중 </p>
+        </section>
 
-  <!-- GLightbox JS -->
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true, autoplayVideos: false, closeButton: true });
-  </script>
+    </main>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        GLightbox({ selector: '.glightbox', touchNavigation: true, loop: true, autoplayVideos: false, closeButton: true });
+    </script>
 </body>
 </html>
